@@ -1,0 +1,112 @@
+[gd_scene load_steps=3 format=3 uid="uid://11ksalib5c8a"]
+
+[ext_resource type="Script" path="res://relicsbox.gd" id="1_m3oqx"]
+[ext_resource type="Texture2D" uid="uid://cydf0lc0j5i8i" path="res://enemySpikey_3.png" id="2_lgdsv"]
+
+[node name="rename" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m3oqx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.940807, 0.208522, 0.490634, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -26.0
+offset_right = 146.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="TextureButton" parent="TextureRect/HBoxContainer/VBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Alliterators Awl: 
+All damage dealt tripled, can only play words starting in the same letter"
+action_mode = 0
+button_mask = 0
+texture_normal = ExtResource("2_lgdsv")
+
+[node name="Panel2" type="TextureButton" parent="TextureRect/HBoxContainer/VBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Plurality:
+The power of plurals! All words played scored as if they were one longer"
+action_mode = 0
+button_mask = 0
+texture_normal = ExtResource("2_lgdsv")
+
+[node name="Panel3" type="TextureButton" parent="TextureRect/HBoxContainer/VBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Pen >= Sword
+Small but mighty! You may only play words of length 4 or less, but they are scored as if they were 2 letters longer."
+action_mode = 0
+button_mask = 0
+texture_normal = ExtResource("2_lgdsv")
+
+[node name="Panel4" type="TextureButton" parent="TextureRect/HBoxContainer/VBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Fortunous Wheel:
+Increases the chances of letters R S T L N E appearing on the wheel, err i mean board"
+action_mode = 0
+button_mask = 0
+texture_normal = ExtResource("2_lgdsv")
+
+[node name="Panel5" type="TextureButton" parent="TextureRect/HBoxContainer/VBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Bingo:
+BINGO! Will always appear on the board"
+action_mode = 0
+button_mask = 0
+texture_normal = ExtResource("2_lgdsv")
+
+[node name="Panel6" type="TextureButton" parent="TextureRect/HBoxContainer/VBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "FAKE NEWS:
+You are immune to the words of others, take 0 damage on the first turn of each combat, and if that doesn't work maybe run for president"
+action_mode = 0
+button_mask = 0
+texture_normal = ExtResource("2_lgdsv")
+
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/VBoxContainer2/Panel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/VBoxContainer2/Panel2" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/VBoxContainer2/Panel3" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/VBoxContainer2/Panel4" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/VBoxContainer2/Panel5" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_entered" from="TextureRect/HBoxContainer/VBoxContainer2/Panel6" to="." method="_on_panel_mouse_entered"]

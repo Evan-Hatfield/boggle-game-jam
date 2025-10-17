@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcdsv2ydr8v3g"]
+
+[ext_resource type="Script" path="res://Hero.gd" id="1_kmwjx"]
+[ext_resource type="Texture2D" uid="uid://c2abrttcrabaw" path="res://avatar_64_4x4.png" id="2_s01ya"]
+
+[sub_resource type="Animation" id="Animation_fsjho"]
+resource_name = "take_damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.6353, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_niwxc"]
+_data = {
+"take_damage": SubResource("Animation_fsjho")
+}
+
+[node name="Hero" type="Node2D"]
+modulate = Color(1, 0, 0, 1)
+skew = -0.6353
+script = ExtResource("1_kmwjx")
+
+[node name="hero1" type="Sprite2D" parent="."]
+texture = ExtResource("2_s01ya")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_niwxc")
+}

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy7gid8yaykl6"]
+
+[ext_resource type="Script" path="res://candle.gd" id="1_lhxjy"]
+[ext_resource type="Texture2D" uid="uid://d065ml7je8mdq" path="res://candle_1.png" id="2_n6bab"]
+[ext_resource type="Texture2D" uid="uid://c0lypagypfmsm" path="res://candle_2.png" id="3_j1xwl"]
+[ext_resource type="Texture2D" uid="uid://dpt7dkvv1y8o7" path="res://candle_3.png" id="4_nbpes"]
+
+[node name="candle" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_lhxjy")
+
+[node name="candle1" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_n6bab")
+
+[node name="candle2" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_j1xwl")
+
+[node name="candle3" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("4_nbpes")
